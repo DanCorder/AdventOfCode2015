@@ -9,7 +9,7 @@ var crypto = require('crypto');
         md5sum.update(secretKey + coinValue);
         var answer = md5sum.digest('hex');
         
-        if (answer.slice(0, 5) === '00000') {
+        if (answer.slice(0, 6) === '000000') {
             break;
         }
         
